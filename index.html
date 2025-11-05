@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+        body {
+            background-color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #000;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            color:  #0a0a0a;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        
+        .container {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            background-color: #fff;
+        }
+
+        .title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 18px;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .attribution {
+            width: auto;
+            padding: 0 10px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            font-size: 0.8em;
+            color: #555;
+        }
+        
+    </style>
+    <title>Radio PMR</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+<body>
+    <h1 style="text-align: center;">PMR - Professional Mobile Radio</h1>
+    <p>Le Radio Mobili Professionali sono sistemi di comunicazioni bidirezionali, di solito half-duplex, che utilizzano radio portatili per la comunicazione della voce.
+        PMR è un termine generale che racchiude varie tipologie di radio, incluse quelle digitali dPMR, quelle private e quelle di libero uso.
+        In questa pagina analizzeremo soltanto le categorie più diffuse di radio portatili di libero uso: le PMR446 e le LPD433.
+    </p>
+
+    <div class="container">
+        <a href="pmr446.html">
+        <div class="box">
+            <img src="./images/Motorola_TLKR_T40.jpg" alt="PMR446">
+            <div class="title">PMR 446</div>
+        </div>
+        </a>
+
+        <a href="lpd433.html">
+        <div class="box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/LPD_433MHz_C10.jpg" alt="LPD 433">
+            <div class="title">LPD 433</div>
+        </div>
+        </a>
+   </div>
+
+    <hr style="margin-top: 50px; margin-bottom: 50px;">
+    <h2>Modulazione FM</h2>
+    <canvas id="fmCanvas"></canvas>
+
+    <hr>
+    <div class="attribution">Autore immagine di sinistra: <a href="https://commons.wikimedia.org/wiki/File:Motorola_TLKR_T40,_front.jpg">Morn</a>, <a
+        href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons<br>
+        Autore immagine di destra:
+        <a href="https://commons.wikimedia.org/wiki/File:LPD_433MHz_C10.jpg">F1jmm</a>, <a
+            href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons
+    </div>
+
+    <script>
+        const canvas = document.getElementById('fmCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 900;
+        canvas.height = 350;
+        const ampiezza = 130;
+        const freqBase = 0.03;
+        const freqMod = 2.5;
+        const profMod = 0.1;
+        const velocita = 0.05;
+
+        let tempo = 0;
+
+        function disegnaAssi() {
+            const centroY = canvas.height / 2;
+            const centroX = canvas.width / 8;
+
+            ctx.strokeStyle = 'rgba(0, 0, 0, 0.8)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(0, centroY);
+            ctx.lineTo(canvas.width, centroY);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(centroX, 0);
+            ctx.lineTo(centroX, canvas.height);
+            ctx.stroke();
+        }
+
+        function disegnaOnda() {
+            ctx.strokeStyle = '#FF0000';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+
+            const centroY = canvas.height / 2;
+            const centroX = canvas.width / 8;
+
+            const freqAttuale = freqBase + profMod * Math.sin(freqMod * tempo);
+
+            for (let x = 0; x < canvas.width; x++) {
+                const x_math = x - centroX;
+                const y_math = ampiezza * Math.sin(freqAttuale * x_math + velocita * tempo);
+                const y_canvas = centroY - y_math;
+
+                if (x === 0) {
+                    ctx.moveTo(x, y_canvas);
+                } else {
+                    ctx.lineTo(x, y_canvas);
+                }
+            }
+            ctx.stroke();
+        }
+
+        function anima() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            disegnaAssi();
+            disegnaOnda();
+            tempo += 0.01;
+            requestAnimationFrame(anima);
+        }
+        anima();
+    </script>
+</body>
+</html>

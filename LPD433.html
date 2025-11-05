@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+        }
+
+        h2 {
+            color: #09912b;
+            text-align: left;
+        }
+
+        p {
+            font-size: 16px;
+            color: #0a0a0a;
+        }
+
+        .blocco-immagine {
+            width: 55%;
+            margin-bottom: 20px;
+        }
+
+        .blocco-immagine.sinistra {
+            float: left;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .blocco-immagine.destra {
+            float: right;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .blocco-immagine a {
+            line-height: 0;
+        }
+
+        .blocco-immagine img {
+            display: block;
+            width: 256px;
+            height: auto;
+        }
+
+        .didascalia {
+            width: auto;
+            padding: 0 10px;
+            box-sizing: border-box;
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        .blocco-immagine.sinistra .didascalia {
+            text-align: left;
+        }
+
+        .blocco-immagine.destra .didascalia {
+            text-align: right;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .lpd-calculator {
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .lpd-calculator label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .lpd-calculator input[type="number"] {
+            width: 150px;
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .lpd-calculator button {
+            padding: 9px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .lpd-calculator button:hover {
+            background-color: #0056b3;
+        }
+
+        .calculator-result {
+            margin-top: 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    </style>
+    <title>LPD 433</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+
+<body>
+    <h1 style="text-align: center; position: relative;">
+        <a href="index.html" style="
+                position: absolute; 
+                left: 10px; 
+                top: 50%; 
+                transform: translateY(-50%); 
+                text-decoration: none; 
+                color: #333;
+                font-size: 1.5em;
+            " class="freccia">
+            &#x2B05;
+        </a>
+        LPD 433
+    </h1>
+    <p>Le LPD 433 (acronimo di Low Power Devices) sono apparati radio ricetrasmettimenti portatili a corto raggio, che operano nella banda di frequenza dei 433 Mhz.
+        La loro caratteristica distintiva è la bassa potenza di trasmissione, limitata a 10 mW (milliWatt). Questo le rende
+        ideali per collegamenti locali in ambienti come escursioni, campeggi, eventi sportivi o come ausilio nelle attività
+        familiari.
+        Una delle ragioni principali della loro diffusione è la totale deregolamentazione in Italia: le radio LPD sono di libero
+        utilizzo, il che significa che non è richiesta alcuna licenza, dichiarazione o tassa annuale per il loro impiego, a meno che si utilizzino apparati omologati e regolamentati da specifiche normative.</p>
+
+    <div class="blocco-immagine sinistra">
+        <a title="Batchman, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons"
+            href="https://commons.wikimedia.org/wiki/File:LPD_et_PMR_(1).jpg"><img width="256" alt="LPD et PMR (1)"
+                src="images/lpd_433.png"></a>
+        <div class="didascalia destra">
+            <a href="https://commons.wikimedia.org/wiki/File:LPD_et_PMR_(1).jpg">Batchman</a>, <a
+                href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="blocco-immagine destra">
+        <img width="256" alt="Alan456" src="images/midland_x70.png">
+        <div class="didascalia sinistra">
+            Midland X70 (LPD/PMR)<br>
+            Sito ufficiale
+            <a href="https://www.midlandeurope.com/it_IT/prodotti/midland-xt70-pro-doppio-walkie-talkie?listId=xt_pro_line&listName=XT%20Pro%20Line&variantCode=C1465&_gl=1*1hcg6fr*_up*MQ..*_ga*MjA2MzYwNjgxNC4xNzYyMTgzMzMz*_ga_GZ1DLF2D8Y*czE3NjIxODMzMzMkbzEkZzEkdDE3NjIxODMzNDYkajQ3JGwwJGgw">Midland</a>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <p>La banda 433,05-434,79 MHz potrà essere utilizzata solo da apparati radio omologati, conformi agli standard tecnici europei, descritti nella direttiva CEPT ERC/REC 70-03.
+        Gli apparati devono soddisfare le seguenti caratteristiche: potenza massima effettiva di 10 mW, antenna integrata non
+        intercambiabile, operare solo con modulazione di frequenza FM, con deviazione massima di 5 kHz e utilizzare solo la banda dedicata dei 433 Mhz, con canali spaziati di 25 kHz.</p>
+
+    <h3>Cosa È Strettamente Vietato</h3>
+    <ul>
+        <li><strong>Apparati non Omologati:</strong> Non è consentito l'uso di apparati radioamatoriali
+            (<em>ricetrasmettitori Baofeng/simili</em>) senza marcatura CE e
+            Dichiarazione di Conformità del produttore, anche se impostati sulla banda dei <strong>433
+                MHz</strong>, se superano la potenza di <strong>10 mW</strong> o hanno antenna rimovibile.</li>
+        <li><strong>Infrastrutture Fisse:</strong> È vietato l'uso di ripetitori, stazioni base fisse,
+            <em>gateway</em> o <em>parrot</em> (ripetitori temporanei) che estendano la portata. LPD 433 è
+            concepito per comunicazioni dirette punto-punto.
+        </li>
+    </ul>
+
+    <hr>
+
+    <section id="canali">
+        <h2>Canali</h2>
+        <p>La banda LPD 433 MHz è suddivisa in 69 canali, con una spaziatura di 25 kHz e modulazione analogica FM.</p>
+
+        <style>
+            
+        </style>
+
+        <div class="lpd-calculator">
+            <label for="freqInput"><b>Numero Canale</b><br>Inserisci la frequenza in MHz (es: 433.100)</label>
+            <input type="number" id="freqInput" min="433.075" max="434.775" step="0.025" placeholder="433.075">
+            <button id="calcButtonLPD">Trova</button>
+            <p id="resultAreaLPD" class="calculator-result"></p>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const calcButton = document.getElementById('calcButtonLPD');
+                const freqInput = document.getElementById('freqInput');
+                const resultArea = document.getElementById('resultAreaLPD');
+
+                calcButton.addEventListener('click', function () {
+
+                    const freq = parseFloat(freqInput.value);
+
+                    if (isNaN(freq)) {
+                        resultArea.textContent = 'Per favore, inserisci un numero valido.';
+                        resultArea.style.color = '#D8000C';
+                        return;
+                    }
+
+                    const baseFreq = 433.075;
+                    const spacing = 0.025;
+                    const minFreq = 433.075;
+                    const maxFreq = 434.775;
+                    const tolerance = 0.00001;
+
+                    if (freq < minFreq || freq > maxFreq) {
+                        resultArea.textContent = 'Frequenza fuori dal range LPD (433.075 - 434.775).';
+                        resultArea.style.color = '#D8000C';
+                        return;
+                    }
+
+                    const diff = freq - baseFreq;
+                    const remainderRatio = (diff / spacing) % 1;
+                    
+                    if (Math.abs(remainderRatio) < tolerance || Math.abs(remainderRatio - 1) < tolerance) {
+                        const channel = Math.round(diff / spacing) + 1;
+                        resultArea.textContent = `Risultato: Canale ${channel}`;
+                        resultArea.style.color = '#4F8A10';
+
+                    } else {
+                        resultArea.textContent = 'Frequenza non standard (non è un canale LPD valido).';
+                        resultArea.style.color = '#E6A700';
+                    }
+                });
+
+                freqInput.addEventListener('keyup', function (event) {
+                    if (event.key === 'Enter') {
+                        calcButton.click();
+                    }
+                });
+
+                freqInput.addEventListener('blur', function () {
+                    const value = freqInput.value;
+                    if (value !== '' && !isNaN(value)) {
+                        const formattedValue = parseFloat(value).toFixed(3);
+                        freqInput.value = formattedValue;
+                    }
+                });
+            });
+        </script>
+    </section>
+
+    <hr>
+    <section id="ctss_dcs">
+        <h2>Apparati bibanda 433 e 446 Mhz</h2>
+        <p>La maggior parte degli apparati che si trovano in commercio aggregano la banda LPD 433 e la banda PMR 446 in un'unico dispositivo.
+            Il loro scopo è dare agli utenti la massima versalità sulle frequenze di libero uso (utilizzando apparati omologati). Ad esempio la PMR 446 hanno una potenza maggiore e quindi una migliore portata in ambienti con ostacoli.
+        </p>
+    </section>
+</body>
+
+</html>

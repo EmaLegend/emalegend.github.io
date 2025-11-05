@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #09912b;
+            text-align: left;
+        }
+
+        p {
+            font-size: 16px;
+            color:  #0a0a0a;
+        }
+
+        .blocco-immagine {
+            width: 55%;
+            margin-bottom: 20px;
+        }
+
+        .blocco-immagine.sinistra {
+            float: left;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .blocco-immagine.destra {
+            float: right;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .blocco-immagine a {
+            line-height: 0;
+        }
+
+        .blocco-immagine img {
+            display: block;
+            width: 256px;
+            height: auto;
+        }
+
+        .didascalia {
+            width: auto;
+            padding: 0 10px;
+            box-sizing: border-box;
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        .blocco-immagine.sinistra .didascalia {
+            text-align: left;
+        }
+
+        .blocco-immagine.destra .didascalia {
+            text-align: right;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #ccc;
+        }
+
+        .divButton{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #audioButton {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        #audioButton:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+        }
+
+    </style>
+    <title>PMR 446</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+<body>
+    <h1 style="text-align: center; position: relative;">
+        <a href="index.html" style="
+                    position: absolute; 
+                    left: 10px; 
+                    top: 50%; 
+                    transform: translateY(-50%); 
+                    text-decoration: none; 
+                    color: #333;
+                    font-size: 1.5em;
+                " class="freccia">
+            &#x2B05;
+        </a>
+        PMR 446
+    </h1>
+    <p>Le PMR 446 (Personal Mobile Radio) sono apparati radio ricetrasmettimenti a corto raggio, il cui utilizzo è libero e gratuito secondo suddette normative. Operano sulla gamma UHF (Ultra High Frequency), più precisamente sulla banda compresa tra 446.000 e 446.200 MHz con modulazione FM.
+        In commercio esistono svariate tipologie di questi apparati, dai classici walkie-talkie per bambini a quelle più professionali pr sport, lavoro, tempo libero, campeggio, sicurezza o tra veicoli in convoglio.
+        La scelta della banda UHF garantisce un ottimo compromesso tra penetrazione negli ostacoli (come edifici o boschi) e dimensioni compatte dell'antenna.</p>
+
+        <div class="blocco-immagine sinistra">
+            <a title="Z3LD1C, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons"
+                href="https://commons.wikimedia.org/wiki/File:IC-F29DR.jpg">
+                <img width="256" alt="IC-F29DR"
+                    src="./images/IC-F29DR.jpg">
+            </a>
+            <div class="didascalia destra">
+                dPMR ICOM IC-F29DR<br>
+                <a href="https://commons.wikimedia.org/wiki/File:IC-F29DR.jpg">Z3LD1C</a>, <a
+                    href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="blocco-immagine destra">
+            <a title="Solaris2006, CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>, via Wikimedia Commons"
+                href="https://commons.wikimedia.org/wiki/File:Alan456.jpg">
+                <img width="256" alt="Alan456"
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Alan456.jpg?20100608083457">
+            </a>
+            <div class="didascalia sinistra">
+                ALAN 456<br>
+                <a href="https://commons.wikimedia.org/wiki/File:Alan456.jpg">Solaris2006</a>, <a
+                    href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        
+        <p>La banda PMR446 potrà essere utilizzata solo da apparati radio omologati, conformi agli standard tecnici europei ETS 300 296. I requisiti sono: potenza massima irradiabile ERP di 0.5 Watt, antenna integrata non intercambiabile ed operare solo con modulazione di frequenza FM.
+        A seguito della pubblicazione in Gazzetta Ufficiale dell'Art. 38 comma 1, lettere E, G del DL n.76 del 16/07/2020
+        "Misure di semplificazione per reti e servizi di comunicazioni elettroniche" non è più dovuto il versamento del contributo annuo di 12 € sia per
+        le PMR446 che per i CB (Citizen Band). Mentre è dovuto per l'utilizzo professionale.</p>
+
+        <h3>Cosa È Strettamente Vietato</h3>
+        <ul>
+            <li><strong>Apparati non Omologati:</strong> Non è consentito l'uso di apparati radioamatoriali
+                (<em>ricetrasmettitori Baofeng/simili</em>) senza marcatura CE e
+                Dichiarazione di Conformità del produttore, anche se impostati sulla frequenza <strong>446
+                    MHz</strong>, se superano la potenza di <strong>0.5 W</strong> o hanno antenna rimovibile.</li>
+            <li><strong>Infrastrutture Fisse:</strong> È vietato l'uso di ripetitori, stazioni base fisse,
+                <em>gateway</em> o <em>parrot</em> (ripetitori temporanei) che estendano la portata. Il PMR446 è
+                concepito per comunicazioni dirette (<em>simplex</em>) tra portatili.
+            </li>
+        </ul>
+        
+        <hr>
+
+        <section id="basi-pmr">
+            <h2>Canali</h2>
+            <p>La banda è suddivisa in 16 canali, con una spaziatura di 12.5 kHz e modulazione analogica FM.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Canale</th>
+                        <th>Frequenza (MHz)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1</strong></td>
+                        <td><strong>446.00625</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2</strong></td>
+                        <td><strong>446.01875</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>3</strong></td>
+                        <td><strong>446.03125</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>4</strong></td>
+                        <td><strong>446.04375</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>5</strong></td>
+                        <td><strong>446.05625</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>6</strong></td>
+                        <td><strong>446.06875</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>7</strong></td>
+                        <td><strong>446.08125</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>8</strong></td>
+                        <td><strong>446.09375</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>9</strong></td>
+                        <td><strong>446.10625</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>10</strong></td>
+                        <td><strong>446.11875</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>11</strong></td>
+                        <td><strong>446.13125</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>12</strong></td>
+                        <td><strong>446.14375</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>13</strong></td>
+                        <td><strong>446.15625</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>14</strong></td>
+                        <td><strong>446.16875</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>15</strong></td>
+                        <td><strong>446.18125</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>16</strong></td>
+                        <td><strong>446.19375</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+        <section id="ctss_dcs">
+            <h2>CTCSS e DCS: Filtri Anti-Disturbo</h2>
+            <p>Per non essere disturbati dalle conversazioni di altri gruppi sullo stesso canale, si utilizzano i
+                <strong>subtoni</strong>:</p>
+            <ul>
+                <li><strong>CTCSS (Continuous Tone-Coded Squelch System):</strong> Toni analogici a bassa frequenza (es.
+                    67.0 Hz) che aprono il silenziatore della radio solo se il tono è presente.</li>
+                <li><strong>DCS (Digital-Coded Squelch):</strong> Codici digitali che svolgono la stessa funzione del
+                    CTCSS, ma in modo digitale.</li>
+            </ul>
+            <p><strong>Attenzione:</strong> Usare i subtoni non garantisce la privacy. Chiunque sia sintonizzato sullo
+                stesso canale e senza subtono (o con un'altra radio che non li supporta) sentirà la vostra
+                conversazione.</p>
+        </section>
+
+        <hr>
+        <div class="divButton">
+            <button id="audioButton">Suono Radio Polizia di Stato</button>
+        </div>
+
+        <script>
+            const FILE_AUDIO = 'suono_polizia_di_stato.mp3';
+            const lettoreAudio = new Audio(FILE_AUDIO);
+            const pulsante = document.getElementById('audioButton');
+
+            pulsante.addEventListener('click', () => {
+                lettoreAudio.currentTime = 0;
+                lettoreAudio.play();
+            });
+        </script>
+</body>
+</html>
